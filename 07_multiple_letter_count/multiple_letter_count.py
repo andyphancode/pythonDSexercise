@@ -7,3 +7,7 @@ def multiple_letter_count(phrase):
         >>> multiple_letter_count('Yay')
         {'Y': 1, 'a': 1, 'y': 1}
     """
+    
+    # tmpphrase = set(phrase)
+    tmp = {letter: phrase.count(letter) for letter in phrase if letter.isalpha()} #phrase should be tmpphrase if we want to filter duplicates but test requires ordered dict
+    return tmp
