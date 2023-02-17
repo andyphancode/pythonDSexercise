@@ -13,4 +13,11 @@ def multiply_even_numbers(nums):
         1
     """
 
-    
+    tmp = [num for num in nums if num % 2 == 0]
+    if len(tmp) < 1:
+        return 1
+    else:
+        tmpsum = 1
+        for number in tmp:
+            tmpsum = tmpsum * number
+        return tmpsum
