@@ -1,3 +1,5 @@
+
+
 def is_odd_string(word):
     """Is the sum of the character-positions odd?
 
@@ -29,3 +31,13 @@ def is_odd_string(word):
     """
 
     # Hint: you may find the ord() function useful here
+
+    word = word.lower()
+    sum = 0
+    for letter in word:
+        sum += (ord(letter) - 96)
+    
+    if sum % 2 != 0:
+        return True
+    
+    return False
